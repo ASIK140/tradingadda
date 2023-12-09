@@ -7,8 +7,14 @@ const errormiddleware = require("./src/Middleware/Error");
 const bodyParser = require("body-parser");
 const db_Connection = require("./src/Config/Database");
 const admin = require("./src/Routes/AdminRouter");
+const cors = require("cors");
 const app = express();
 
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookie());

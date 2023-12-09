@@ -20,7 +20,7 @@ router
 router.route("/news").post(Auth, checkAuthAdmin("admin"), createNews);
 router.route("/dex").post(Auth, checkAuthAdmin("admin"), createDex);
 router.route("/resource").post(Auth, checkAuthAdmin("admin"), createResource);
-router.route("/allusers").get(Auth, checkAuthAdmin("admin"), getAllUser);
+router.route("/allusers").get(getAllUser);
 router.route("/del-sen/:id").delete(Auth, checkAuthAdmin("admin"), deleteSen);
 router.route("/del-dex/:id").delete(Auth, checkAuthAdmin("admin"), deleteDex);
 router.route("/del-news/:id").delete(Auth, checkAuthAdmin("admin"), deleteNews);
