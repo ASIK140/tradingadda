@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://tradingaddaacademy.in",
+    origin: "https://www.tradingaddaacademy.in",
   })
 );
 app.use(bodyParser.urlencoded({ extended: false }));
