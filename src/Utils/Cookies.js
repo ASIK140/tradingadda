@@ -5,8 +5,8 @@ const sendCookie = (user, statusCode, res) => {
       Date.now() + process.env.COOKIE_EXPIRE * (24 * 60 * 60 * 1000)
     ),
     httpOnly: true,
-    sameSite: "lax",
-    secure: true,
+    sameSite: "none",
+    secure: false,
   };
 
   res.status(statusCode).cookie("token", token, options).json({
