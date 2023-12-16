@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:"http://192.168.29.50:5173", 
+    origin:"*", 
     credentials: true,
   })
 );
