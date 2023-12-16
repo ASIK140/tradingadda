@@ -19,6 +19,7 @@ app.use(
       "http://tradingaddaacademy.in",
       "http://192.168.29.50:5173",
     ],
+    credentials: true,
   })
 );
 app.use(bodyParser.urlencoded({ extended: false }));
