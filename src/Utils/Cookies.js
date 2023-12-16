@@ -6,7 +6,7 @@ const sendCookie = (user, statusCode, res) => {
     ),
     httpOnly: true,
     sameSite: "lax",
-    secure: false,
+    secure: true,
   };
 
   res.status(statusCode).cookie("token", token, options).json({
