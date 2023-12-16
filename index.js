@@ -17,6 +17,7 @@ app.use(
       "https://tradingaddaacademy.in",
       "http://www.tradingaddaacademy.in",
       "http://tradingaddaacademy.in",
+      "http://192.168.29.50:5173",
     ],
   })
 );
