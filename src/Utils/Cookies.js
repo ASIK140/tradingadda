@@ -7,6 +7,7 @@ const sendCookie = (user, statusCode, res) => {
     httpOnly: false,
     sameSite: "None",
     secure: true,
+    domain:"www.tradingaddaacademy.in",
   };
 
   res.status(statusCode).cookie("token", token, options).json({
