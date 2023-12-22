@@ -10,7 +10,7 @@ const Resource = require("../Models/Admin/Resource");
 
 //Register
 exports.SignUp = AsyncError(async (req, res, next) => {
-  let { name, email, password, confirmpass, transactionID } = req.body;
+  let { name, email, phone, password, confirmpass, transactionID } = req.body;
   const checkEmail = await Users.findOne({ email });
   if (checkEmail) {
     return next(new ErrorHander(400, "This email is already registered"));
@@ -23,6 +23,7 @@ exports.SignUp = AsyncError(async (req, res, next) => {
   const user = await Users.create({
     name,
     email,
+    phone,
     password,
     transactionID,
   });
