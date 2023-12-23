@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:"https://www.tradingaddaacademy.in", 
+    origin:["https://www.tradingaddaacademy.in","http://tradingaddaacademy.in","https://tradingaddaacademy.in","https://tradingaddaacademy.in"], 
     credentials: true,
   })
 );
