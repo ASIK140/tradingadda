@@ -96,7 +96,7 @@ exports.deleteNews = AsyncError(async (req, res, next) => {
 });
 
 exports.deleteResource = AsyncError(async (req, res, next) => {
-  await News.deleteOne({ _id: req.params.id });
+  await Resource.deleteOne({ _id: req.params.id });
   res.status(200).json({
     success: true,
     message: "Resource Deleted",
